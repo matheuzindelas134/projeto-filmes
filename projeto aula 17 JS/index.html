@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilmesGratis.com</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="root">
+        <header class="header">
+            <nav class="content01">
+                <ul>
+                    <a href="#" id="inicio-link"><li>Início</li></a>
+                    <a href="#" id="filmes-link"><li>Filmes</li></a>
+                    <a href="#" id="series-link"><li>Séries</li></a>
+                </ul>
+            </nav>
+            <div>
+                <form id="search-form">
+                    <div class="input-container">
+                        <input type="text" name="search" id="search" class="search" placeholder="Qual filme ou série você procura?">
+                        <button id="search-button" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                              </svg>
+
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+
+    <section class="container" id="resultado"></section>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>

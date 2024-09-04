@@ -1,0 +1,122 @@
+.header {
+    width: 100%;
+    background-color: rgb(3, 3, 3);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(249, 249, 249);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.content01 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-left: 60px;
+}
+
+ul {
+    display: flex;
+    gap: 10rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(249, 249, 249);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 120px 80px 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.412);
+    background-color: azure;
+}
+body{
+    background-image: url(./fundo\ preto.jpg);
+}
+
+.texto {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+}
+
+.image-element {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.loading {
+    text-align: center;
+    font-size: 20px;
+    color: #007bff;
+}   
+
+
+.ul-content{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    font-size: 16px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+#search-button {
+    padding: 10px 20px;
+   
+    border-radius: 0;
+    background-color:transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+}
