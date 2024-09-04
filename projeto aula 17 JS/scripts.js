@@ -37,6 +37,39 @@ async function carregarFilmesPopulares() {
     }
 }
 
+async function buscarFilmes(query) {
+    try {
+        const resposta = await fetch(`${apiUrl}/search/movie?api_key=${apiKey}&language=pt-BR&query=${encodeURIComponent(query)}`);
+        const dados = await resposta.json();
+
+        resultado.innerHTML = '';
+
+        if (dados.results.length === 0) {
+            resultado.textContent = 'Nenhum filme encontrado.';
+            return;
+        }
+
+        dados.results.forEach((element) => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const texto = document.createElement("p");
+            texto.textContent = element.title;
+            texto.className = "texto";
+
+            const imagem = document.createElement("img");
+            imagem.src = `https://image.tmdb.org/t/p/w500${element.poster_path}`;
+            imagem.className = "image-element";
+
+            card.append(texto, imagem);
+
+            resultado.appendChild(card);
+        });
+    } catch (error) {
+        console.error(error);
+        resultado.textContent = "Erro ao consumir a API. Por favor, verifique a URL.";
+    }
+}
 async function carregarSeriesPopulares() {
     try {
         const resposta = await fetch(`${apiUrl}/tv/popular?api_key=${apiKey}&language=pt-BR`);
